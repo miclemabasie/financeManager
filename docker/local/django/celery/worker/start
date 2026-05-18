@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -o errexit
+
+set -o nounset
+
+watchmedo auto-restart -d finance_manager/ -p '*.py' -- celery -A finance_manager worker -l info

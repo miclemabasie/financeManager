@@ -22,6 +22,7 @@ class Role(models.TextChoices):
     ADMIN = "admin", _("Admin")
     MODERATOR = "moderator", _("Moderator")
     USER = "user", _("User")
+    BANK_ADMIN = "bank_admin", _("Bank Admin")
 
 
 class User(AbstractBaseUser, PermissionsMixin):

@@ -3,7 +3,7 @@
 > **Academic Project** – A mobile-first application that helps individuals manage personal finances, save via Mobile Money, and interact with multiple banks/microfinance institutions without complex bank APIs.
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Django](https://img.shields.io/badge/Django-5.2-green)
+![Django](https://img.shields.io/badge/Django-5.2-green);
 ![React Native](https://img.shields.io/badge/React%20Native-Expo-blue)
 
 ---
@@ -71,7 +71,7 @@ smart-save/
 │   │   ├── core/                # Shared base models
 │   │   ├── users/               # Custom user + profile
 │   │   ├── notifications/       # Email/SMS templates & sending
-│   │   └── finance/             # ⭐ Main finance logic
+│   │   └── finance/             # Main finance logic
 │   ├── static/                  # Static files
 │   ├── media/                   # User uploads
 │   ├── logs/                    # Application logs
@@ -118,6 +118,8 @@ cd smart-save
 #### Using Docker (recommended)
 ```bash
 cp app/.env.example app/.env   # edit with your values
+mkdir app/logs
+touch app/logs/django.log      # Assuming Linux! look up for windows
 docker-compose up -d --build
 docker-compose exec api python manage.py migrate
 docker-compose exec api python manage.py createsuperuser
@@ -262,33 +264,9 @@ user.save()
 
 ---
 
-## Contribution
-
-This is an academic project. For any improvements or bug fixes:
-
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/amazing-feature`).
-3. Commit your changes.
-4. Push to the branch.
-5. Open a Pull Request.
-
-Please ensure all diagrams in `architecture.md` remain consistent.
-
----
-
 ## License
 
 MIT License – free for educational and non‑commercial use.
-
----
-
-## Contact
-
-Project Supervisor: [Your Supervisor Name]  
-Developer: [Your Name] – [Your Email]  
-
-**Institution:** [Your University / School]  
-**Year:** 2025/2026
 
 ---
 
